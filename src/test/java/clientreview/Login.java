@@ -43,7 +43,7 @@ public class Login extends Base {
 	@Test(priority = 2)
 	public void invalidPasswordDetails() {
 		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys(prop.getProperty("validEmail"));
-		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("Fincart@2024d");
+		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(dataProp.getProperty("invalidPassword"));
 		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
 		String expected = "Error: Username or password is incorrect";
 		String actual = driver.findElement(By.xpath("//div[@class='alert alert-danger mt-3 mb-0']")).getText();
