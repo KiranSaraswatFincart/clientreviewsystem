@@ -40,6 +40,7 @@ public class Login extends Base {
 		Assert.assertTrue(driver.findElement(By.xpath("//a[@class='employee-detail-id active']")).isDisplayed());
 	}
 
+
 	@Test(priority = 2)
 	public void invalidPasswordDetails() {
 		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys(prop.getProperty("validEmail"));
