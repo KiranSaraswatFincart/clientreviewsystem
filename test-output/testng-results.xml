@@ -1,77 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="3" failed="5" skipped="0">
+<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-23T17:12:41 IST" name="Default suite" finished-at="2025-05-23T17:13:54 IST" duration-ms="72153">
+  <suite started-at="2025-06-03T22:20:12 IST" name="Default suite" finished-at="2025-06-03T22:21:09 IST" duration-ms="56974">
     <groups>
     </groups>
-    <test started-at="2025-05-23T17:12:41 IST" name="Default test" finished-at="2025-05-23T17:13:54 IST" duration-ms="72153">
-      <class name="clientreview.ForgotPassword">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:41 IST" name="setUp" finished-at="2025-05-23T17:12:46 IST" duration-ms="4685" status="PASS">
+    <test started-at="2025-06-03T22:20:12 IST" name="Default test" finished-at="2025-06-03T22:21:09 IST" duration-ms="56974">
+      <class name="clientreview.Login">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:13 IST" name="setUp" finished-at="2025-06-03T22:20:18 IST" duration-ms="5127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ForgotPasswordForUnregisteredEmail()[pri:1, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:46 IST" name="ForgotPasswordForUnregisteredEmail" finished-at="2025-05-23T17:12:48 IST" duration-ms="1394" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ForgotPasswordForUnregisteredEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:48 IST" name="tearDown" finished-at="2025-05-23T17:12:48 IST" duration-ms="428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:48 IST" name="setUp" finished-at="2025-05-23T17:12:52 IST" duration-ms="3837" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="ForgotPasswordWithoutEmail()[pri:2, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:52 IST" name="ForgotPasswordWithoutEmail" finished-at="2025-05-23T17:12:52 IST" duration-ms="380" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ForgotPasswordWithoutEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:52 IST" name="tearDown" finished-at="2025-05-23T17:12:53 IST" duration-ms="411" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:53 IST" name="setUp" finished-at="2025-05-23T17:12:56 IST" duration-ms="3566" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="NavigateBackToLogin()[pri:3, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:56 IST" name="NavigateBackToLogin" finished-at="2025-05-23T17:12:57 IST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NavigateBackToLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:57 IST" name="tearDown" finished-at="2025-05-23T17:12:57 IST" duration-ms="428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:12:57 IST" name="setUp" finished-at="2025-05-23T17:13:01 IST" duration-ms="3746" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="ForgotPasswordWithBlankDetails()[pri:4, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:01 IST" name="ForgotPasswordWithBlankDetails" finished-at="2025-05-23T17:13:02 IST" duration-ms="1422" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+        <test-method signature="validLoginDetails(java.lang.String,java.lang.String)[pri:1, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:18 IST" name="validLoginDetails" data-provider="validDataProvider" finished-at="2025-06-03T22:20:29 IST" duration-ms="10586" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testentry@fincart.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fincart@123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[stale element reference: stale element not found in the current frame
-  (Session info: chrome=136.0.7103.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='employee-detail-id active']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.32.0', revision: 'd17c8aa950'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64d76fe2fdbcc5dfaff3ff52468cca93, clickElement {id=f.937B65582B80494C81B5E45529AB8580.d.3E5B779096A2832C385766232607AAC8.e.39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62867}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62867/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (64d76fe2fdbcc5dfaff3ff52468cca93)] -> xpath: //button[@class='btn btn-fincart']]
-Session ID: 64d76fe2fdbcc5dfaff3ff52468cca93]]>
+Command: [c0d7832c7712c3f99e9463cf0a139884, findElement {using=xpath, value=//a[@class='employee-detail-id active']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53628}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53628/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0d7832c7712c3f99e9463cf0a139884]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=136.0.7103.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='employee-detail-id active']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.32.0', revision: 'd17c8aa950'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [64d76fe2fdbcc5dfaff3ff52468cca93, clickElement {id=f.937B65582B80494C81B5E45529AB8580.d.3E5B779096A2832C385766232607AAC8.e.39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62867}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62867/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (64d76fe2fdbcc5dfaff3ff52468cca93)] -> xpath: //button[@class='btn btn-fincart']]
-Session ID: 64d76fe2fdbcc5dfaff3ff52468cca93
+Command: [c0d7832c7712c3f99e9463cf0a139884, findElement {using=xpath, value=//a[@class='employee-detail-id active']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53628}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53628/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0d7832c7712c3f99e9463cf0a139884
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -82,9 +56,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at clientreview.ForgotPassword.ForgotPasswordWithBlankDetails(ForgotPassword.java:67)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+at com.clientreview.pages.DashboardPage.loggedInMailIsDisplayedText(DashboardPage.java:22)
+at clientreview.Login.validLoginDetails(Login.java:52)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -113,247 +93,75 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ForgotPasswordWithBlankDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:02 IST" name="tearDown" finished-at="2025-05-23T17:13:03 IST" duration-ms="392" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:03 IST" name="setUp" finished-at="2025-05-23T17:13:08 IST" duration-ms="5137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="passwordValidationWithLength()[pri:5, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:08 IST" name="passwordValidationWithLength" finished-at="2025-05-23T17:13:18 IST" duration-ms="10587" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=136.0.7103.114)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9ca0574d819022428ac3f96921124340, sendKeysToElement {id=f.6219CB37C15FDFAD2635053C3F80DD0E.d.4E2580C4E4B21616F96DB851C400D661.e.1, value=[Ljava.lang.CharSequence;@2a3a299}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62909/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (9ca0574d819022428ac3f96921124340)] -> xpath: (//input[@id='otpcode'])[1]]
-Session ID: 9ca0574d819022428ac3f96921124340]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=136.0.7103.114)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9ca0574d819022428ac3f96921124340, sendKeysToElement {id=f.6219CB37C15FDFAD2635053C3F80DD0E.d.4E2580C4E4B21616F96DB851C400D661.e.1, value=[Ljava.lang.CharSequence;@2a3a299}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62909}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62909/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (9ca0574d819022428ac3f96921124340)] -> xpath: (//input[@id='otpcode'])[1]]
-Session ID: 9ca0574d819022428ac3f96921124340
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at clientreview.ForgotPassword.passwordValidationWithLength(ForgotPassword.java:79)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- passwordValidationWithLength -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:18 IST" name="tearDown" finished-at="2025-05-23T17:13:19 IST" duration-ms="522" status="PASS">
+        </test-method> <!-- validLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:29 IST" name="tearDown" finished-at="2025-06-03T22:20:29 IST" duration-ms="461" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:19 IST" name="setUp" finished-at="2025-05-23T17:13:21 IST" duration-ms="1925" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:29 IST" name="setUp" finished-at="2025-06-03T22:20:31 IST" duration-ms="2235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="samePasswordValidation()[pri:6, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:21 IST" name="samePasswordValidation" finished-at="2025-05-23T17:13:33 IST" duration-ms="12519" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=136.0.7103.114)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [603c71dc7f7cba96e6fa09d0ca5597d0, sendKeysToElement {id=f.7A728C97BC64FAD53B81F911BE2E7529.d.A7C43FBF76EE881434AEA4B6F624896F.e.1, value=[Ljava.lang.CharSequence;@143d9a93}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62938/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (603c71dc7f7cba96e6fa09d0ca5597d0)] -> xpath: (//input[@id='otpcode'])[1]]
-Session ID: 603c71dc7f7cba96e6fa09d0ca5597d0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=136.0.7103.114)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [603c71dc7f7cba96e6fa09d0ca5597d0, sendKeysToElement {id=f.7A728C97BC64FAD53B81F911BE2E7529.d.A7C43FBF76EE881434AEA4B6F624896F.e.1, value=[Ljava.lang.CharSequence;@143d9a93}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62938}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62938/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (603c71dc7f7cba96e6fa09d0ca5597d0)] -> xpath: (//input[@id='otpcode'])[1]]
-Session ID: 603c71dc7f7cba96e6fa09d0ca5597d0
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at clientreview.ForgotPassword.samePasswordValidation(ForgotPassword.java:90)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="validLoginDetails(java.lang.String,java.lang.String)[pri:1, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:31 IST" name="validLoginDetails" data-provider="validDataProvider" finished-at="2025-06-03T22:20:34 IST" duration-ms="3237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[amardeepkumar@fincart.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fincart@1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- samePasswordValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:33 IST" name="tearDown" finished-at="2025-05-23T17:13:34 IST" duration-ms="517" status="PASS">
+        </test-method> <!-- validLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:34 IST" name="tearDown" finished-at="2025-06-03T22:20:35 IST" duration-ms="380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:34 IST" name="setUp" finished-at="2025-05-23T17:13:36 IST" duration-ms="2065" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:35 IST" name="setUp" finished-at="2025-06-03T22:20:39 IST" duration-ms="3945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="invalidOtp()[pri:7, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:36 IST" name="invalidOtp" finished-at="2025-05-23T17:13:48 IST" duration-ms="12534" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=136.0.7103.114)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8516fe9687b347aaac6a5e8b2b84c876, sendKeysToElement {id=f.1B4C588CD57A62348B016FD7CA52DDF8.d.E719D7E15CF38188E43A3123BF10D78A.e.1, value=[Ljava.lang.CharSequence;@76911385}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62971}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62971/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (8516fe9687b347aaac6a5e8b2b84c876)] -> xpath: (//input[@id='otpcode'])[1]]
-Session ID: 8516fe9687b347aaac6a5e8b2b84c876]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=136.0.7103.114)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8516fe9687b347aaac6a5e8b2b84c876, sendKeysToElement {id=f.1B4C588CD57A62348B016FD7CA52DDF8.d.E719D7E15CF38188E43A3123BF10D78A.e.1, value=[Ljava.lang.CharSequence;@76911385}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\FINCART\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62971}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62971/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (8516fe9687b347aaac6a5e8b2b84c876)] -> xpath: (//input[@id='otpcode'])[1]]
-Session ID: 8516fe9687b347aaac6a5e8b2b84c876
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at clientreview.ForgotPassword.invalidOtp(ForgotPassword.java:103)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="validLoginDetails(java.lang.String,java.lang.String)[pri:1, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:39 IST" name="validLoginDetails" data-provider="validDataProvider" finished-at="2025-06-03T22:20:41 IST" duration-ms="1800" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tanwir.alam@fincart.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Fincart@2024]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidOtp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:48 IST" name="tearDown" finished-at="2025-05-23T17:13:49 IST" duration-ms="468" status="PASS">
+        </test-method> <!-- validLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:41 IST" name="tearDown" finished-at="2025-06-03T22:20:41 IST" duration-ms="385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:49 IST" name="setUp" finished-at="2025-05-23T17:13:53 IST" duration-ms="3835" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:41 IST" name="setUp" finished-at="2025-06-03T22:20:45 IST" duration-ms="3571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validDetails()[pri:8, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:53 IST" name="validDetails" finished-at="2025-05-23T17:13:53 IST" duration-ms="483" status="FAIL">
+        <test-method signature="validLoginDetails(java.lang.String,java.lang.String)[pri:1, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:45 IST" name="validLoginDetails" data-provider="validDataProvider" finished-at="2025-06-03T22:20:45 IST" duration-ms="35" status="FAIL">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Keys to send should be a not null CharSequence]]>
@@ -361,7 +169,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             <full-stacktrace>
               <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-at clientreview.ForgotPassword.validDetails(ForgotPassword.java:115)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+at com.clientreview.pages.LoginPage.getUserName(LoginPage.java:36)
+at clientreview.Login.validLoginDetails(Login.java:44)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -393,12 +206,72 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.ForgotPassword@73a1e9a9]" started-at="2025-05-23T17:13:53 IST" name="tearDown" finished-at="2025-05-23T17:13:54 IST" duration-ms="388" status="PASS">
+        </test-method> <!-- validLoginDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:45 IST" name="tearDown" finished-at="2025-06-03T22:20:45 IST" duration-ms="366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- clientreview.ForgotPassword -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:45 IST" name="setUp" finished-at="2025-06-03T22:20:49 IST" duration-ms="3667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidPasswordDetails()[pri:2, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:49 IST" name="invalidPasswordDetails" finished-at="2025-06-03T22:20:50 IST" duration-ms="1454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPasswordDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:50 IST" name="tearDown" finished-at="2025-06-03T22:20:50 IST" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:51 IST" name="setUp" finished-at="2025-06-03T22:20:54 IST" duration-ms="3333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidEmailDetails()[pri:3, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:54 IST" name="invalidEmailDetails" finished-at="2025-06-03T22:20:55 IST" duration-ms="1508" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidEmailDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:55 IST" name="tearDown" finished-at="2025-06-03T22:20:56 IST" duration-ms="406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:56 IST" name="setUp" finished-at="2025-06-03T22:20:59 IST" duration-ms="3614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="blankEmailDetails()[pri:4, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:20:59 IST" name="blankEmailDetails" finished-at="2025-06-03T22:21:00 IST" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankEmailDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:00 IST" name="tearDown" finished-at="2025-06-03T22:21:00 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:00 IST" name="setUp" finished-at="2025-06-03T22:21:04 IST" duration-ms="3791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="blankPasswordDetails()[pri:5, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:04 IST" name="blankPasswordDetails" finished-at="2025-06-03T22:21:04 IST" duration-ms="378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankPasswordDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:04 IST" name="tearDown" finished-at="2025-06-03T22:21:05 IST" duration-ms="343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:05 IST" name="setUp" finished-at="2025-06-03T22:21:08 IST" duration-ms="3547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="blankPasswordEmailDetails()[pri:6, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:08 IST" name="blankPasswordEmailDetails" finished-at="2025-06-03T22:21:08 IST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- blankPasswordEmailDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:clientreview.Login@1165b38]" started-at="2025-06-03T22:21:08 IST" name="tearDown" finished-at="2025-06-03T22:21:09 IST" duration-ms="343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- clientreview.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

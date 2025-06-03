@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="clientreview.ForgotPassword">
+      <class name="clientreview.Login">
         <methods>
-          <include name="tearDown"/>
+          <include name="validLoginDetails" invocation-numbers="0 3"/>
           <include name="setUp"/>
-          <include name="samePasswordValidation"/>
-          <include name="passwordValidationWithLength"/>
-          <include name="invalidOtp"/>
-          <include name="validDetails"/>
-          <include name="ForgotPasswordWithBlankDetails"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- clientreview.ForgotPassword -->
+      </class> <!-- clientreview.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

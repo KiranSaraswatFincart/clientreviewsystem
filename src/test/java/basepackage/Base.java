@@ -11,10 +11,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.clientreview.test.utils.Utilities;
 
 public class Base {
+	 protected WebDriverWait wait;
+
 	public Properties prop;
 	public Properties dataProp;
 	public  Base() {
@@ -85,4 +89,11 @@ public class Base {
 		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
 		
 	}
+	  public void waitForSpinnerToDisappear() {
+	        try {
+	            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='spinner']")));
+	        } catch (Exception e) {
+	            System.out.println("Loader not present or already disappeared.");
+	        }
+}
 }

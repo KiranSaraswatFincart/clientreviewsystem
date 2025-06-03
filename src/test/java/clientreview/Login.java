@@ -1,18 +1,22 @@
 package clientreview; 
 
-import org.openqa.selenium.By;
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.clientreview.pages.DashboardPage;
+import com.clientreview.pages.LoginPage;
 import com.clientreview.test.utils.Utilities;
 
 import basepackage.Base;
 
 public class Login extends Base {
-	WebDriver driver;
+	public	WebDriver driver;
 
 	public Login() {
 		super();
@@ -22,6 +26,7 @@ public class Login extends Base {
 	public void setUp() {
 		
 		driver = intializeBrowserAndUrl(prop.getProperty("browserName"));
+		
 
 	}
 
@@ -32,64 +37,88 @@ public class Login extends Base {
 		}
 	}
 
-	@Test(priority = 1)
-	public void validLoginDetails() {
-		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys(prop.getProperty("validEmail"));
-		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(prop.getProperty("validPassword"));
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
-		Assert.assertTrue(driver.findElement(By.xpath("//a[@class='employee-detail-id active']")).isDisplayed());
+	@Test(priority = 1, dataProvider = "validDataProvider")
+	public void validLoginDetails(String userName, String password) {
+	    // Create an instance of the LoginPage and use the provided data
+	    LoginPage loginPage = new LoginPage(driver);
+	    loginPage.getUserName(userName);  // Use the data provider values
+	    loginPage.getPassword(password);  // Use the data provider values
+	    loginPage.clickLogin();
+
+	    // Create an instance of the DashboardPage to check if the user is logged in
+	    DashboardPage dashboardPage = new DashboardPage(driver);
+	    
+	    // Assert that the logged-in email is displayed
+	    Assert.assertTrue(dashboardPage.loggedInMailIsDisplayedText(), "User email is not displayed on dashboard.");
 	}
-
-
+	@DataProvider(name = "validDataProvider")
+	public Object[][] supplyTestData() {
+	    Object[][] data = null;
+	    try {
+	        // Fetch the data from Excel using the Utilities.fetchDataFromExcel method
+	        data = Utilities.fetchDataFromExcel("LoginData");
+	    } catch (IOException e) {
+	        // Log the error and optionally fail the test if data cannot be loaded
+	        e.printStackTrace();
+	        Assert.fail("Failed to load test data from Excel", e); // This will fail the test if data can't be loaded
+	    }
+	    return data;
+	}
 	@Test(priority = 2)
 	public void invalidPasswordDetails() {
-		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys(prop.getProperty("validEmail"));
-		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(dataProp.getProperty("invalidPassword"));
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.getUserName(prop.getProperty("validEmail"));
+		loginPage.getPassword(dataProp.getProperty("invalidPassword"));
+		loginPage.clickLogin();
 		String expected = "Error: Username or password is incorrect";
-		String actual = driver.findElement(By.xpath("//div[@class='alert alert-danger mt-3 mb-0']")).getText();
+		String actual =loginPage.WarningTextForEmailPaswwordIncorrect();
 		Assert.assertTrue(actual.contains(expected), expected);
 	}
 
 	@Test(priority = 3)
 	public void invalidEmailDetails() {
-		driver.findElement(By.xpath("//input[@formcontrolname='username']"))
-				.sendKeys("shilpi.goyal" + Utilities.getTimeStamp() + "@fincart.com");
-		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys(prop.getProperty("validPassword"));
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.getUserName(Utilities.getTimeStamp() + "@fincart.com");
+		loginPage.getPassword(prop.getProperty("validPassword"));
+		loginPage.clickLogin();
+
 		String expected = "Error: Username or password is incorrect";
-		String actual = driver.findElement(By.xpath("//div[@class='alert alert-danger mt-3 mb-0']")).getText();
+		String actual =loginPage.WarningTextForEmailPaswwordIncorrect();
 		Assert.assertTrue(actual.contains(expected), expected);
 	}
 
 	@Test(priority = 4)
 	public void blankEmailDetails() {
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.getPassword(prop.getProperty("validPassword"));
+		loginPage.clickLogin();
 
-		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("12345");
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
 		String expected = "Username is required";
-		String actual = driver.findElement(By.xpath("(//div[@class='invalid-feedback'])[1]")).getText();
+		String actual = loginPage.UsernameIsRequired();
 		Assert.assertTrue(actual.contains(expected), expected);
 	}
 
 	@Test(priority = 5)
 	public void blankPasswordDetails() {
-		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys(prop.getProperty("validEmail"));
+		LoginPage loginPage=new LoginPage(driver);
+        loginPage.getUserName(prop.getProperty("validEmail"));
+		loginPage.clickLogin();
 
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
 		String expected = "Password is required";
-		String actual = driver.findElement(By.xpath("(//div[@class='invalid-feedback'])[1]")).getText();
+		String actual = loginPage.UsernameIsRequired();
 		Assert.assertTrue(actual.contains(expected), expected);
 	}
 
 	@Test(priority = 6)
 	public void blankPasswordEmailDetails() {
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
+		LoginPage loginPage=new LoginPage(driver);
+		loginPage.clickLogin();
+
 		String expected = "Username is required";
-		String actual = driver.findElement(By.xpath("(//div[@class='invalid-feedback'])[1]")).getText();
+		String actual = loginPage.UsernameIsRequired();
 		Assert.assertTrue(actual.contains(expected), expected);
 		String expectedPasswordMessage = "Password is required";
-		String actualPasswordMessage = driver.findElement(By.xpath("(//div[@class='invalid-feedback'])[2]")).getText();
+		String actualPasswordMessage =loginPage.PasswordIsRequired();
 		Assert.assertTrue(actualPasswordMessage.contains(expectedPasswordMessage), expectedPasswordMessage);
 	}
 
