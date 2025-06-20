@@ -2,13 +2,31 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="clientreview.ForgotPassword">
-       <methods>
-          <include name="validDetails" />
-        </methods>
-      </class>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+    <test name="Test">
+        <classes>
+            <!-- Only run 1 method from Login class -->
+            <class name="clientreview.Login">
+                <methods>
+                    <include name="validLoginDetailsCheck"/> <!-- specify exact test -->
+                </methods>
+            </class>
+
+            <!-- Run all 3 tests from NavigationToClientReview class but skip inherited Login methods -->
+            <class name="clientreview.NaviagtionToClientReview">
+                <methods>
+                    <!-- Exclude the inherited methods from Login class to prevent re-running -->
+                    
+                    <exclude name="validLoginDetails"/>
+                    <exclude name="invalidPasswordDetails"/>
+                    <exclude name="invalidEmailDetails"/>
+                    <exclude name="blankEmailDetails"/>
+                    <exclude name="blankPasswordDetails"/>
+                    <exclude name="blankPasswordEmailDetails"/>
+                    <exclude name="validLoginDetailsCheck"/>
+                    <include name="searchWithValidEmail"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

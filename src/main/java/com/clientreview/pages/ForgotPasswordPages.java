@@ -125,4 +125,6 @@ public class ForgotPasswordPages {
 		String getSuccessfullyPasswordChangedText=successfullyPasswordChanged.getText();
 		return getSuccessfullyPasswordChangedText;
 	}
+	
+	
 }

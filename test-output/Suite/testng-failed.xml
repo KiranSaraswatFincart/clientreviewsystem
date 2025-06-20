@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="clientreview.ForgotPassword">
+      <class name="clientreview.NaviagtionToClientReview">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="validDetails"/>
+          <include name="searchWithValidEmail"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- clientreview.ForgotPassword -->
+      </class> <!-- clientreview.NaviagtionToClientReview -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

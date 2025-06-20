@@ -13,7 +13,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
+import com.clientreview.pages.NavigationToClientReviewPage;
 import com.clientreview.test.utils.Utilities;
 
 public class Base {
@@ -96,4 +98,13 @@ public class Base {
 	            System.out.println("Loader not present or already disappeared.");
 	        }
 }
+	
+		public void OpenSideMenu()
+		{
+			NavigationToClientReviewPage NavigationToClientReviewPage =new NavigationToClientReviewPage(driver);
+			NavigationToClientReviewPage.OpenSideMenuScreen();
+			NavigationToClientReviewPage.navaigateToReports();
+			NavigationToClientReviewPage.ClickToClientScreen();
+		}
+		  
 }

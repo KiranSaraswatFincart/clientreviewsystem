@@ -1,5 +1,7 @@
 package clientreview;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +10,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.clientreview.dbconnection.DBUtils;
 import com.clientreview.pages.ForgotPasswordPages;
 
 import basepackage.Base;
@@ -134,18 +135,16 @@ public class ForgotPassword extends Base {
 	@Test(priority = 8)
 	public void validDetails() {
 		ForgotPasswordValidation();
-		System.out.println("33");
 
 		waitForSpinnerToDisappear();
 		ForgotPasswordPages forgotPassword = new ForgotPasswordPages(driver);
-		forgotPassword.enterOtpCodes();
+      		forgotPassword.enterOtpCodes();
+
+        // Scanner to pause execution until ENTER is pressed in the console
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine(); // Wait for ENTER key
 	
 
-		// Fetch the latest OTP from DB (without using email)
-		String dbOtp = DBUtils.getLatestOtp();
-
-		// Use OTP in the form
-		forgotPassword.enterOtpCode(dbOtp);
 		forgotPassword.enterNewPasswordTexts();
 		forgotPassword.enterNewPasswordText(prop.getProperty("NewPassword"));
 		forgotPassword.enterConfirmPasswordTexts();
