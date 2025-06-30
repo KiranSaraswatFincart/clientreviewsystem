@@ -6,8 +6,8 @@
       <class name="clientreview.NaviagtionToClientReview">
         <methods>
           <include name="setUp"/>
-          <include name="searchWithValidEmail"/>
-          <include name="tearDown"/>
+          <include name="setUpNavigation"/>
+          <include name="validLoginDetailsCheck"/>
         </methods>
       </class> <!-- clientreview.NaviagtionToClientReview -->
     </classes>

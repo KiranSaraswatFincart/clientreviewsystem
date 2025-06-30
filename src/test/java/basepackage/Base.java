@@ -98,13 +98,6 @@ public class Base {
 	            System.out.println("Loader not present or already disappeared.");
 	        }
 }
-	
-		public void OpenSideMenu()
-		{
-			NavigationToClientReviewPage NavigationToClientReviewPage =new NavigationToClientReviewPage(driver);
-			NavigationToClientReviewPage.OpenSideMenuScreen();
-			NavigationToClientReviewPage.navaigateToReports();
-			NavigationToClientReviewPage.ClickToClientScreen();
-		}
+
 		  
 }
