@@ -32,12 +32,12 @@ public class Login extends Base {
 }
 
 
-	@AfterMethod
-	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}
+//	@AfterMethod
+//	public void tearDown() {
+//		if (driver != null) {
+//			driver.quit();
+//		}
+//	}
 
 	@Test(priority = 1, dataProvider = "validDataProvider")
 	public void validLoginDetails(String userNames, String passwords) {

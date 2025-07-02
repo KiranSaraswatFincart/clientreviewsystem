@@ -76,7 +76,7 @@ public class Base {
 
     public void waitForSpinnerToDisappear() {
         try {
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='spinner']")));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("(//div[@class='spinner'])[1]")));
         } catch (Exception e) {
             System.out.println("Loader not present or already disappeared.");
         }

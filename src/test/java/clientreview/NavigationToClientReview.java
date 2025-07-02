@@ -12,9 +12,10 @@ public class NavigationToClientReview extends Base {
     public NavigationToClientReview() {
         super();
     }
-    waitForSpinnerToDisappear;
     @Test(priority = 2)
     public void setUpNavigation() {
+        waitForSpinnerToDisappear();
+
         navigationPage = new NavigationToClientReviewPage(driver);
         navigationPage.OpenSideMenuScreen();
         navigationPage.navaigateToReports();
@@ -23,11 +24,15 @@ public class NavigationToClientReview extends Base {
 
     @Test(priority = 3)
     public void searchPreExisted() {
+        waitForSpinnerToDisappear();
+
         navigationPage.SearchElementClick();
     }
 
     @Test(priority = 4)
     public void searchWithCategoryFilter() throws InterruptedException {
+        waitForSpinnerToDisappear();
+
         Thread.sleep(2000);
         navigationPage.CategoryFilterSearch();
         navigationPage.DeSelectFilter();
@@ -38,6 +43,8 @@ public class NavigationToClientReview extends Base {
 
     @Test(priority = 5)
     public void markReviews() {
+        waitForSpinnerToDisappear();
+
         navigationPage.PendingReviewCount();
         navigationPage.EllipsisClick();
         navigationPage.MarkReviewNavigation();
