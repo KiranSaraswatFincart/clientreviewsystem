@@ -15,13 +15,15 @@ public class NavigationToClientReview extends Base {
     @Test(priority = 2)
     public void setUpNavigation() {
         waitForSpinnerToDisappear();
-
+//wi
         navigationPage = new NavigationToClientReviewPage(driver);
         navigationPage.OpenSideMenuScreen();
         navigationPage.navaigateToReports();
         navigationPage.ClickToClientScreen();
+        
     }
 
+    
     @Test(priority = 3)
     public void searchPreExisted() {
         waitForSpinnerToDisappear();
