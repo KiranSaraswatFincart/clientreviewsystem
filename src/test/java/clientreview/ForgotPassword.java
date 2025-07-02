@@ -25,7 +25,7 @@ public class ForgotPassword extends Base {
 	@BeforeMethod
 	public void setUp() {
 
-		driver = intializeBrowserAndUrl(prop.getProperty("browserName"));
+		driver = initializeBrowserAndUrl(prop.getProperty("browserName"));
 
 	}
 

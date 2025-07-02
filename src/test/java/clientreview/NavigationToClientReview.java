@@ -1,19 +1,19 @@
 package clientreview;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.clientreview.pages.NavigationToClientReviewPage;
 
-public class NaviagtionToClientReview extends Login {
+import basepackage.Base;
+
+public class NavigationToClientReview extends Base {
 
     private NavigationToClientReviewPage navigationPage;
 
-    public NaviagtionToClientReview() {
+    public NavigationToClientReview() {
         super();
     }
-
-    @BeforeMethod
+    waitForSpinnerToDisappear;
+    @Test(priority = 2)
     public void setUpNavigation() {
         navigationPage = new NavigationToClientReviewPage(driver);
         navigationPage.OpenSideMenuScreen();
@@ -21,33 +21,31 @@ public class NaviagtionToClientReview extends Login {
         navigationPage.ClickToClientScreen();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 3)
     public void searchPreExisted() {
         navigationPage.SearchElementClick();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 4)
     public void searchWithCategoryFilter() throws InterruptedException {
-        Thread.sleep(2000); 
+        Thread.sleep(2000);
         navigationPage.CategoryFilterSearch();
         navigationPage.DeSelectFilter();
         navigationPage.Selectcategory();
         navigationPage.myTeamRadioButton();
         navigationPage.SearchElementClick();
-        
-    }
-    @Test(priority=3)
-    public void markReviews()
-    {
-    	navigationPage.PendingReviewCount();
-    	navigationPage.EllipsisClick();
-    	navigationPage.MarkReviewNavigation();
-    	navigationPage.discussionPoint();
-    	navigationPage.selectDiscussionPoint();
-    	navigationPage.datePicker();
-    	navigationPage.enterDate();
-    	navigationPage.commentAdd();
-    	navigationPage.saveMarkreview();
     }
 
+    @Test(priority = 5)
+    public void markReviews() {
+        navigationPage.PendingReviewCount();
+        navigationPage.EllipsisClick();
+        navigationPage.MarkReviewNavigation();
+        navigationPage.discussionPoint();
+        navigationPage.selectDiscussionPoint();
+        navigationPage.datePicker();
+        navigationPage.enterDate();
+        navigationPage.commentAdd();
+        navigationPage.saveMarkreview();
+    }
 }

@@ -13,91 +13,72 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterSuite;
 
-import com.clientreview.pages.NavigationToClientReviewPage;
 import com.clientreview.test.utils.Utilities;
 
 public class Base {
-	 protected WebDriverWait wait;
+    public static WebDriver driver;
+    protected WebDriverWait wait;
+    public Properties prop;
+    public Properties dataProp;
 
-	public Properties prop;
-	public Properties dataProp;
-	public  Base() {
-		 prop=new Properties();
-		 dataProp=new Properties();
-		File propFile=new File("src\\main\\java\\propertiesfile\\propertyfile.properties");
-		
-		try {
-			FileInputStream fis = new FileInputStream(propFile);
-			prop.load(fis);
+    public Base() {
+        prop = new Properties();
+        dataProp = new Properties();
+        try {
+            FileInputStream fis = new FileInputStream("src\\main\\java\\propertiesfile\\propertyfile.properties");
+            prop.load(fis);
 
-			
-		} catch ( Throwable e) {
-			
-			e.printStackTrace();
-		}
-			
-	
-	    
-		File dataPropFile=new File("src\\main\\java\\TestDataPackage\\TestData.properties");
-		
-		try {
-			FileInputStream fis1 = new FileInputStream(dataPropFile);
-			dataProp.load(fis1);
+            FileInputStream fis1 = new FileInputStream("src\\main\\java\\TestDataPackage\\TestData.properties");
+            dataProp.load(fis1);
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
 
-			
-		} catch ( Throwable e) {
-			
-			e.printStackTrace();
-		}
-			}
+    @BeforeSuite
+    public void setUpSuite() {
+        driver = initializeBrowserAndUrl(prop.getProperty("browserName"));
+    }
 
-  WebDriver driver;
-  public WebDriver intializeBrowserAndUrl(String browserName)
-  {
-	  
-	
-	if (browserName.equalsIgnoreCase("Chrome"))
-	{
-		driver = new ChromeDriver();
-	}
-	
-	else if(browserName.equalsIgnoreCase("firebox"))
-	{
-		driver = new FirefoxDriver();
-	}
-	
-	else if(browserName.equalsIgnoreCase("safari"))
-	{
-		driver = new SafariDriver();
-	}
-	else if(browserName.equalsIgnoreCase("edge"))
-	{
-		driver = new EdgeDriver();
-	}
-	
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilities.IMPLICIT_WAIT_TIME));
-	driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utilities.PAGE_LOAD_TIME));
-	driver.get(prop.getProperty("url"));
-	return driver;
-}
-	public  void ForgotPasswordValidation()
-	{
+    @AfterSuite
+    public void tearDownSuite() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
-		driver.findElement(By.xpath("//a[normalize-space()='Forgot Password?']")).click();
-		driver.findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(dataProp.getProperty("ValidEmail"));
-		driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
-		
-	}
-	  public void waitForSpinnerToDisappear() {
-	        try {
-	            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='spinner']")));
-	        } catch (Exception e) {
-	            System.out.println("Loader not present or already disappeared.");
-	        }
-}
+    public WebDriver initializeBrowserAndUrl(String browserName) {
+        if (browserName.equalsIgnoreCase("Chrome")) {
+            driver = new ChromeDriver();
+        } else if (browserName.equalsIgnoreCase("Firefox")) {
+            driver = new FirefoxDriver();
+        } else if (browserName.equalsIgnoreCase("Safari")) {
+            driver = new SafariDriver();
+        } else if (browserName.equalsIgnoreCase("Edge")) {
+            driver = new EdgeDriver();
+        }
 
-		  
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilities.IMPLICIT_WAIT_TIME));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utilities.PAGE_LOAD_TIME));
+        driver.get(prop.getProperty("url"));
+        return driver;
+    }
+
+    public void ForgotPasswordValidation() {
+        driver.findElement(By.xpath("//a[normalize-space()='Forgot Password?']")).click();
+        driver.findElement(By.xpath("//input[@formcontrolname='email']")).sendKeys(dataProp.getProperty("ValidEmail"));
+        driver.findElement(By.xpath("//button[@class='btn btn-fincart']")).click();
+    }
+
+    public void waitForSpinnerToDisappear() {
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='spinner']")));
+        } catch (Exception e) {
+            System.out.println("Loader not present or already disappeared.");
+        }
+    }
 }

@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
     <test name="Test">
         <classes>
             <class name="clientreview.Login">
                 <methods>
-                    <include name="validLoginDetailsCheck"/> 
+                    <include name="validLoginDetailsCheck" />
                 </methods>
             </class>
-      <class name="clientreview.NaviagtionToClientReview">
-            </class>
+            <class name="clientreview.NavigationToClientReview" />
         </classes>
     </test>
-
 </suite>

@@ -3,13 +3,16 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="clientreview.NaviagtionToClientReview">
+      <class name="clientreview.NavigationToClientReview">
         <methods>
-          <include name="setUp"/>
+          <include name="searchPreExisted"/>
           <include name="setUpNavigation"/>
-          <include name="validLoginDetailsCheck"/>
+          <include name="searchWithCategoryFilter"/>
+          <include name="tearDownSuite"/>
+          <include name="setUpSuite"/>
+          <include name="markReviews"/>
         </methods>
-      </class> <!-- clientreview.NaviagtionToClientReview -->
+      </class> <!-- clientreview.NavigationToClientReview -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
